@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Knowledge Assistant</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <div class="bot-info">
+        <div class="bot-avatar">
+          <i class="fas fa-robot"></i>
+        </div>
+        <div class="bot-details">
+          <h3>AI Chatbot</h3>
+          <span class="status">Online</span>
+        </div>
+      </div>
+      <div class="header-actions">
+        <button class="clear-btn" onclick="clearChat()">
+          <i class="fas fa-trash"></i>
+        </button>
+      </div>
+    </div>
+    
+    <div class="chat-messages" id="chat-box">
+      <div class="message bot-message">
+        <div class="message-avatar">
+          <i class="fas fa-robot"></i>
+        </div>
+        <div class="message-content">
+          <p>Hello! I'm your AI Knowledge Assistant. Just ask me anything!</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="chat-input-container">
+      <div class="input-wrapper">
+        <input type="text" id="user-input" placeholder="Ask me anything..." onkeypress="handleKeyPress(event)">
+        <button class="send-btn" onclick="sendMessage()">
+          <i class="fas fa-paper-plane"></i>
+        </button>
+      </div>
+      <div class="quick-actions">
+        <button class="quick-btn" onclick="askQuestion('What is artificial intelligence?')">AI</button>
+        <button class="quick-btn" onclick="askQuestion('Tell me about space exploration')">Space</button>
+        <button class="quick-btn" onclick="askQuestion('What are the benefits of exercise?')">Health</button>
+        <button class="quick-btn" onclick="askQuestion('Explain climate change')">Climate</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
